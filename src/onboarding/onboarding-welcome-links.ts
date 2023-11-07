@@ -24,26 +24,7 @@ class OnboardingWelcomeLinks extends LitElement {
   @property({ type: Boolean }) public mobileApp!: boolean;
 
   protected render(): TemplateResult {
-    return html`<a
-        target="_blank"
-        rel="noreferrer noopener"
-        href="https://www.home-assistant.io/blog/2016/01/19/perfect-home-automation/"
-      >
-        <onboarding-welcome-link
-          noninteractive
-          .iconPath=${mdiFileDocument}
-          .label=${this.localize("ui.panel.page-onboarding.welcome.vision")}
-        >
-        </onboarding-welcome-link>
-      </a>
-      <onboarding-welcome-link
-        class="community"
-        @click=${this._openCommunity}
-        .iconPath=${mdiAccountGroup}
-        .label=${this.localize("ui.panel.page-onboarding.welcome.community")}
-      >
-      </onboarding-welcome-link>
-      ${this.mobileApp
+    return html`${this.mobileApp
         ? nothing
         : html`<onboarding-welcome-link
             class="app"

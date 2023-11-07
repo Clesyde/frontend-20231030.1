@@ -115,18 +115,14 @@ class HaConfigInfo extends LitElement {
         <div class="content">
           <ha-card outlined class="header">
             <a
-              href=${documentationUrl(this.hass, "")}
+              href="https://www.clesyde.lu"
               target="_blank"
               rel="noreferrer"
             >
-              <ha-logo-svg
-                title=${this.hass.localize(
-                  "ui.panel.config.info.home_assistant_logo"
-                )}
-              >
+              <ha-logo-svg title="Clesyde">
               </ha-logo-svg>
             </a>
-            <p>Home Assistant</p>
+            <p>Clesyde</p>
             <ul class="versions">
               <li>
                 <span class="version-label">Core</span>
@@ -163,30 +159,6 @@ class HaConfigInfo extends LitElement {
             </ul>
           </ha-card>
           <ha-card outlined class="pages">
-            <mwc-list>
-              ${PAGES.map(
-                (page) => html`
-                  <ha-clickable-list-item
-                    graphic="avatar"
-                    openNewTab
-                    href=${documentationUrl(this.hass, page.path)}
-                  >
-                    <div
-                      slot="graphic"
-                      class="icon-background"
-                      .style="background-color: ${page.iconColor}"
-                    >
-                      <ha-svg-icon .path=${page.iconPath}></ha-svg-icon>
-                    </div>
-                    <span>
-                      ${this.hass.localize(
-                        `ui.panel.config.info.items.${page.name}`
-                      )}
-                    </span>
-                  </ha-clickable-list-item>
-                `
-              )}
-            </mwc-list>
             ${customUiList.length
               ? html`
                   <div class="custom-ui">

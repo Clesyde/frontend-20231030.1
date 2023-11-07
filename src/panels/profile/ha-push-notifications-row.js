@@ -25,12 +25,6 @@ class HaPushNotificationsRow extends LocalizeMixin(PolymerElement) {
         >
         <span slot="description">
           [[localize(_descrLocalizeKey)]]
-          <a
-            href="[[_computeDocumentationUrl(hass)]]"
-            target="_blank"
-            rel="noreferrer"
-            >[[localize('ui.panel.profile.push_notifications.link_promo')]]</a
-          >
         </span>
         <ha-push-notifications-toggle
           hass="[[hass]]"

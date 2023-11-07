@@ -132,22 +132,22 @@ gulp.task("ensure-translations-build-dir", async () => {
 });
 
 gulp.task("create-test-metadata", () =>
-  env.isProdBuild()
-    ? Promise.resolve()
-    : writeFile(
+  /**env.isProdBuild()
+    ? **/Promise.resolve()
+    /**: writeFile(
         workDir + "/testMetadata.json",
         JSON.stringify({ test: { nativeName: "Test" } })
-      )
+      )*/
 );
 
 gulp.task("create-test-translation", () =>
-  env.isProdBuild()
-    ? Promise.resolve()
-    : gulp
+  /**env.isProdBuild()
+    ?**/ Promise.resolve()
+    /** : gulp
         .src(path.join(paths.translations_src, "en.json"))
         .pipe(transform((data, _file) => recursiveEmpty(data)))
         .pipe(rename("test.json"))
-        .pipe(gulp.dest(workDir))
+        .pipe(gulp.dest(workDir))**/
 );
 
 /**
@@ -182,7 +182,7 @@ gulp.task("build-merged-translations", () =>
     .src([
       inFrontendDir + "/*.json",
       "!" + inFrontendDir + "/en.json",
-      ...(env.isProdBuild() ? [] : [workDir + "/test.json"]),
+      ...(env.isProdBuild() ? [] : []),
     ])
     .pipe(transform((data, file) => lokaliseTransform(data, data, file)))
     .pipe(
@@ -199,7 +199,7 @@ gulp.task("build-merged-translations", () =>
         const src = [fullDir + "/en.json"];
         for (let i = 1; i <= subtags.length; i++) {
           const lang = subtags.slice(0, i).join("-");
-          if (lang === "test") {
+          if (lang === "tast") {
             src.push(workDir + "/test.json");
           } else if (lang !== "en") {
             src.push(inFrontendDir + "/" + lang + ".json");
@@ -365,7 +365,7 @@ gulp.task("build-translation-write-metadata", () =>
   gulp
     .src([
       path.join(paths.translations_src, "translationMetadata.json"),
-      ...(env.isProdBuild() ? [] : [workDir + "/testMetadata.json"]),
+      ...(env.isProdBuild() ? [] : []),
       workDir + "/translationFingerprints.json",
     ])
     .pipe(merge({}))
