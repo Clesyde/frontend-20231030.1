@@ -75,7 +75,7 @@ export class AssistPref extends LitElement {
         </h1>
         <div class="header-actions">
           <a
-            href=${documentationUrl(this.hass, "/docs/assist/")}
+            href="https://www.clesyde.lu"
             target="_blank"
             rel="noreferrer noopener"
             class="icon-link"

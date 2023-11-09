@@ -201,7 +201,7 @@ export class HaVoiceCommandDialog extends LitElement {
             </ha-button-menu>
           </div>
           <a
-            href=${documentationUrl(this.hass, "/docs/assist/")}
+            href="https://www.clesyde.lu"
             slot="actionItems"
             target="_blank"
             rel="noopener noreferer"

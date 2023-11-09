@@ -226,10 +226,7 @@ class ViewMountDialog extends LitElement {
           <a
             slot="actionItems"
             class="header_button"
-            href=${documentationUrl(
-              this.hass,
-              "/common-tasks/os#network-storage"
-            )}
+            href="https://www.clesyde.lu"
             title=${this.hass.localize(
               "ui.panel.config.storage.network_mounts.documentation"
             )}

@@ -5,7 +5,7 @@ import { customElement } from "lit/decorators";
 export class HaLogoSvg extends LitElement {
   protected render(): TemplateResult {
     return html`<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    width="507.629px" height="158.07px" viewBox="0 0 507.629 158.07" enable-background="new 0 0 507.629 158.07"
+    width="300px" height="100" viewBox="0 0 507.629 158.07" enable-background="new 0 0 507.629 158.07"
     xml:space="preserve">
  <g>
    <path fill="#444C4C" d="M120.295,98.049c1.616,0,3.17-0.188,4.66-0.564c1.491-0.376,2.905-0.912,4.242-1.608

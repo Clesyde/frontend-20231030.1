@@ -60,7 +60,7 @@ export class HuiSaveConfig extends LitElement implements HassDialog {
             "ui.panel.lovelace.editor.save_config.header"
           )}<a
             class="header_button"
-            href=${documentationUrl(this.hass!, "/lovelace/")}
+            href="https://www.clesyde.lu"
             title=${this.hass!.localize("ui.panel.lovelace.menu.help")}
             target="_blank"
             rel="noreferrer"

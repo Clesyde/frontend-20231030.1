@@ -120,13 +120,13 @@ export class HaAuthorize extends litLocalizeLiteMixin(LitElement) {
                   >`,
                 })}
           </ha-alert>`
-        : html`<p>${this.localize("ui.panel.page-authorize.authorizing")}</p>`}
+        : html`<p><center>${this.localize("ui.panel.page-authorize.authorizing")}</center></p>`}
       ${inactiveProviders.length > 0
-        ? html`<p>
+        ? html`<p><center>
             ${this.localize("ui.panel.page-authorize.logging_in_with", {
               authProviderName: html`<b>${this._authProvider!.name}</b>`,
             })}
-          </p>`
+          </center></p>`
         : nothing}
 
       <ha-auth-flow
