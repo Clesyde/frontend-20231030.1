@@ -51,20 +51,10 @@ export class DialogJoinBeta
           ${this.hass.localize("ui.dialogs.join_beta_channel.release_items")}
         </p>
         <ul>
-          <li>Home Assistant Core</li>
-          <li>Home Assistant Supervisor</li>
-          <li>Home Assistant Operating System</li>
+          <li>Core</li>
+          <li>Supervisor</li>
+          <li>Operating System</li>
         </ul>
-        <a
-          href=${documentationUrl(this.hass!, "/faq/release/")}
-          target="_blank"
-          rel="noreferrer"
-        >
-          ${this.hass!.localize(
-            "ui.dialogs.join_beta_channel.view_documentation"
-          )}
-          <ha-svg-icon .path=${mdiOpenInNew}></ha-svg-icon>
-        </a>
         <mwc-button slot="primaryAction" @click=${this._cancel}>
           ${this.hass.localize("ui.common.cancel")}
         </mwc-button>
