@@ -125,12 +125,12 @@ class HassioCoreInfo extends LitElement {
       title: this.supervisor.localize(
         "confirm.restart.title",
         "name",
-        "Home Assistant Core"
+        "Clesyde Core"
       ),
       text: this.supervisor.localize(
         "confirm.restart.text",
         "name",
-        "Home Assistant Core"
+        "Clesyde Core"
       ),
       confirmText: this.supervisor.localize("common.restart"),
       dismissText: this.supervisor.localize("common.cancel"),
@@ -149,7 +149,7 @@ class HassioCoreInfo extends LitElement {
           title: this.supervisor.localize(
             "common.failed_to_restart_name",
             "name",
-            "Home AssistantCore"
+            "Clesyde Core"
           ),
           text: extractApiErrorMessage(err),
         });
