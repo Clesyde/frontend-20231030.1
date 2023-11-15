@@ -1,3 +1,5 @@
+import { options } from "marked";
+
 export interface BrandsOptions {
   domain: string;
   type: "icon" | "logo" | "icon@2x" | "logo@2x";
@@ -13,14 +15,25 @@ export interface HardwareBrandsOptions {
   darkOptimized?: boolean;
 }
 
+export const brandsUrl = (options :BrandsOptions): string =>
+  (options.domain == "homeassistant") ?
+  "https://www.clesyde.lu/icone_build_clesyde/logo.png"
+  :
+  `https://brands.home-assistant.io/${options.brand ? "brands/" : ""}${
+    options.useFallback ? "_/" : ""
+  }${options.domain}/${options.darkOptimized ? "dark_" : ""}${
+    options.type
+  }.png`
+  ;
 
-export const brandsUrl = (options: BrandsOptions): string =>
+
+/*export const brandsUrl = (options: BrandsOptions): string =>
  `https://${options.domain} = "homeassistant" ? "www.clesyde.lu/icone_build_clesyde/logo.png" : 
  "brands.home-assistant.io/${options.brand ? "brands/" : ""}${
   options.useFallback ? "_/" : ""}{options.domain}/${options.darkOptimized ? "dark_" : ""}${
     options.type
   }.png"`;
-
+*/
 
 export const hardwareBrandsUrl = (options: HardwareBrandsOptions): string =>
   `https://brands.home-assistant.io/hardware/${options.category}/${
