@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/bocaderf/clesyde/Tools/frontend-20231030.1/env"
+set -gx VIRTUAL_ENV "/home/bocaderf/clesyde/Tools/frontend-20231030.2/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

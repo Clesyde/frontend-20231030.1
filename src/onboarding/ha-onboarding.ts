@@ -375,6 +375,7 @@ class HaOnboarding extends litLocalizeLiteMixin(HassElement) {
       }
     } else if (stepResult.type === "core_config") {
       this._progress = 0.75;
+      //this._progress = 1;
       // We do nothing
     } else if (stepResult.type === "analytics") {
       this._progress = 1;
